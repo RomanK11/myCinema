@@ -17,4 +17,8 @@ public class UserService {
    public User createUser(@RequestBody User user) {
         return userRepository.save(user);
    }
+
+   public User loginUser(@RequestBody User user) {
+    return userRepository.searchByNicknameAndPassword(user.getUsername(), user.getPassword());
+}
 }
