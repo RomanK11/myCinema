@@ -35,16 +35,7 @@ public class CategoryController {
         return categoryService.getAllByCategoryName(name);
     }
 
-    @PostMapping("/add-category")
-    public Category addCategory(@RequestBody Category category) {
-        return categoryService.addNewCategory(category);
-    }
 
-    @DeleteMapping("/delete-category/{name}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public void deleteCategory(@PathVariable String name) {
-        categoryService.delCategory(name);
-    }
     
     
 }

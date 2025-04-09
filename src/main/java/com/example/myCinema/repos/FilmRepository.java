@@ -10,4 +10,7 @@ public interface FilmRepository extends CrudRepository<Film, Long> {
     
     @Query("SELECT * FROM films WHERE category_id = :category_id")
     Iterable<Film> getAllByCategoryId(@Param("category_id") Long category_id);
+
+    @Query("SELECT id FROM films WHERE :title = title")
+    Long getIdByTitle(@Param("title") String title);
 }

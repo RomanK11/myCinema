@@ -23,14 +23,7 @@ public class CategoryService {
         return filmRepository.getAllByCategoryId(id);
     }
 
-    public Category addNewCategory(@RequestBody Category category) {
-        return categoryRepository.save(category);
-    }
 
-    public void delCategory(String name) {
-        Long id = categoryRepository.getIdByName(name);
-        categoryRepository.deleteById(id);
-    }
 
     
 }
